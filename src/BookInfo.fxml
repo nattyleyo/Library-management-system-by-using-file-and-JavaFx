@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1327.0" prefHeight="720.0" prefWidth="1320.0" style="-fx-background-color: #D0EBF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookInfoController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="210.0" style="-fx-background-color: #640DB5; -fx-border-width: 1;">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="122.0" layoutX="42.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/librarian.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bookInfo_btn" layoutX="11.0" layoutY="210.0" mnemonicParsing="false" onAction="#bookInfo" prefHeight="32.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="Book Info" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="issueBook_btn" alignment="CENTER" layoutX="11.0" layoutY="254.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="32.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="Issue Book" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="editLibAccount_btn" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="294.0" mnemonicParsing="false" onAction="#editLibAccount" prefHeight="32.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="Change Password" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="libLogout_btn" layoutX="11.0" layoutY="335.0" mnemonicParsing="false" onAction="#libLogout" prefHeight="32.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="LogOut" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="23.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/padlock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="23.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/issue.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="50.0" layoutX="30.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/book.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="23.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1127.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="94.0" maxHeight="598.0" maxWidth="358.0" minHeight="598.0" minWidth="358.0" prefHeight="598.0" prefWidth="358.0" style="-fx-background-color: #F6D7BB; -fx-border-width: 1; -fx-border-color: #ECA76A;">
+               <children>
+                  <TextField fx:id="title_field" layoutX="154.0" layoutY="167.0" prefHeight="26.0" prefWidth="170.0" promptText="book tittle" style="-fx-background-color: white;" />
+                  <TextField fx:id="author_field" layoutX="154.0" layoutY="206.0" prefHeight="26.0" prefWidth="170.0" promptText="Author" style="-fx-background-color: white;" />
+                  <TextField fx:id="quantity_field" layoutX="154.0" layoutY="352.0" prefHeight="26.0" prefWidth="150.0" promptText="Quantity" style="-fx-background-color: white;" />
+                  <TextField fx:id="price_field" layoutX="154.0" layoutY="313.0" prefHeight="26.0" prefWidth="150.0" promptText="price" style="-fx-background-color: white;" />
+                  <Button fx:id="bookNew_btn" layoutX="42.0" layoutY="467.0" mnemonicParsing="false" onAction="#bookNew" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #45ADDE;" text="New" />
+                  <Button fx:id="bookAdd_btn" layoutX="187.0" layoutY="467.0" mnemonicParsing="false" onAction="#bookAdd" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #45ADDE;" text="Add" />
+                  <Label layoutX="71.0" layoutY="48.0" text="Book Information">
+                     <font>
+                        <Font name="Times New Roman Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="bookUpdate_btn" layoutX="46.0" layoutY="513.0" mnemonicParsing="false" onAction="#bookUpdate" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #45ADDE;" text="Update" />
+                  <Button fx:id="bookDelete_btn" layoutX="187.0" layoutY="513.0" mnemonicParsing="false" onAction="#bookDelete" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #45ADDE;" text="Delete" />
+                  <Label fx:id="alert_label1" layoutX="41.0" layoutY="93.0" prefHeight="18.0" prefWidth="276.0" style="-fx-background-color: transparent;" textFill="GREEN" />
+                  <Label layoutX="66.0" layoutY="167.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="Book Tittle:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ISBN_field" layoutX="154.0" layoutY="128.0" prefHeight="26.0" prefWidth="130.0" promptText="ISNB No" style="-fx-background-color: white;" />
+                  <Label layoutX="75.0" layoutY="128.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="ISBN No:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="242.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="Catagory:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="206.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="66.0" text="Author :">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="352.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="Quantity:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="87.0" layoutY="275.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="58.0" text="Editon:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="313.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="50.0" text="Price:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="391.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="92.0" text="Book Status:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="edition_field" layoutX="153.0" layoutY="275.0" prefHeight="26.0" prefWidth="150.0" promptText="Edition" style="-fx-background-color: white;" />
+                  <TextField fx:id="bookStatus_field" layoutX="154.0" layoutY="391.0" prefHeight="26.0" prefWidth="150.0" promptText="book status" style="-fx-background-color: white;" />
+                  <TextField fx:id="category_field" layoutX="153.0" layoutY="242.0" prefHeight="26.0" prefWidth="170.0" promptText="catagory" style="-fx-background-color: white;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="382.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="726.0" style="-fx-background-color: #F6D7BB; -fx-border-width: 1; -fx-border-color: #ECA76A;">
+               <children>
+                  <TableView fx:id="bookTable" layoutX="5.0" layoutY="49.0" prefHeight="482.0" prefWidth="715.0" style="-fx-background-color: #FAF5E1;">
+                     <columns>
+                        <TableColumn fx:id="col_ISBN" prefWidth="57.59991455078125" text="ISBN" />
+                        <TableColumn fx:id="col_title" prefWidth="139.99996948242188" text="Book title " />
+                        <TableColumn fx:id="col_author" prefWidth="109.60003662109375" text="Author" />
+                        <TableColumn fx:id="col_category" prefWidth="82.39996337890625" text="Category" />
+                        <TableColumn fx:id="col_edition" prefWidth="64.0" text="Edition" />
+                        <TableColumn fx:id="col_price" prefWidth="75.20001220703125" text="Price" />
+                        <TableColumn fx:id="col_quantity" minWidth="0.0" prefWidth="81.59991455078125" text="Quantity" />
+                        <TableColumn fx:id="col_bookStatus" prefWidth="97.60009765625" text="Book Status" />
+                     </columns>
+                  </TableView>
+                  <TextField alignment="CENTER" layoutX="278.0" layoutY="14.0" style="-fx-background-color: white;" text="Book Lists">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="bookSearch_label" layoutX="127.0" layoutY="39.0" onAction="#bookSearch" prefHeight="30.0" prefWidth="490.0" promptText="search book here" style="-fx-background-color: transparent; -fx-border-color: orange; -fx-border-radius: 15px;" />
+            <ImageView fitHeight="30.0" fitWidth="50.0" layoutX="69.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/search.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="alert_label2" layoutX="388.0" layoutY="75.0" prefHeight="25.0" prefWidth="276.0" style="-fx-background-color: transparent;" textFill="GREEN" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
