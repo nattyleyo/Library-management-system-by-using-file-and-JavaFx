@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="750.0" prefWidth="1320.0" style="-fx-background-color: #D0EBF6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminController">
+   <children>
+      <AnchorPane prefHeight="750.0" prefWidth="205.0" style="-fx-background-color: #640DB5; -fx-border-width: 1;">
+         <children>
+            <ImageView fitHeight="126.0" fitWidth="122.0" layoutX="45.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/admin.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="libInfo_btn" layoutX="3.0" layoutY="183.0" mnemonicParsing="false" onAction="#libInfo" prefHeight="32.0" prefWidth="195.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="          Librarian Info" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="editAdminAccount_btn" alignment="CENTER_RIGHT" layoutX="7.0" layoutY="231.0" mnemonicParsing="false" onAction="#editAdminAccount" prefHeight="32.0" prefWidth="188.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="          Change Password" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="adminLogout_btn" layoutX="12.0" layoutY="273.0" mnemonicParsing="false" onAction="#adminLogout" prefHeight="32.0" prefWidth="188.0" style="-fx-background-color: transparent; -fx-border-color: #3bf59b; -fx-border-radius: 15px;" text="LogOut" textFill="#efd615">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="23.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/padlock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="23.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/librarian2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="750.0" prefWidth="1118.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="582.0" prefWidth="358.0" style="-fx-background-color: #F6D7BB; -fx-border-width: 1; -fx-border-color: #ECA76A;">
+               <children>
+                  <PasswordField fx:id="libPassword_field" layoutX="118.0" layoutY="215.0" promptText="password" style="-fx-background-color: white;" />
+                  <TextField fx:id="libUsername_field" layoutX="118.0" layoutY="180.0" promptText="username" style="-fx-background-color: white;" />
+                  <TextField fx:id="libEmail_field" layoutX="116.0" layoutY="256.0" prefHeight="26.0" prefWidth="188.0" promptText="email" style="-fx-background-color: white;" />
+                  <TextField fx:id="libPhoneNo_field" layoutX="116.0" layoutY="290.0" prefHeight="26.0" prefWidth="188.0" promptText="+2519********" style="-fx-background-color: white;" />
+                  <TextField fx:id="libAddress_field" layoutX="116.0" layoutY="326.0" prefHeight="26.0" prefWidth="188.0" promptText="address" style="-fx-background-color: white;" />
+                  <Label layoutX="23.0" layoutY="179.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="Username">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="214.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="74.0" text="Password">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="256.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="62.0" text="Email">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="290.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="PhoneNo">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="326.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="74.0" text="Address">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="libinfoAdd_btn" layoutX="183.0" layoutY="404.0" mnemonicParsing="false" onAction="#libDataAdd" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #45ADDE;" text="Add" />
+                  <Button fx:id="libINewData_btn" layoutX="47.0" layoutY="404.0" mnemonicParsing="false" onAction="#libNew" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #45ADDE;" text="New" />
+                  <Label layoutX="67.0" layoutY="52.0" text="Librarian Information">
+                     <font>
+                        <Font name="Times New Roman Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="libInfoUpdate_btn" layoutX="40.0" layoutY="460.0" mnemonicParsing="false" onAction="#libDataUpdate" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #45ADDE;" text="Update" />
+                  <Button fx:id="libInfoDelete_btn" layoutX="187.0" layoutY="460.0" mnemonicParsing="false" onAction="#libDataDelete" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #45ADDE;" text="Delete" />
+                  <Label fx:id="alert_label1" alignment="CENTER" layoutX="41.0" layoutY="95.0" prefHeight="18.0" prefWidth="276.0" style="-fx-background-color: transparent;" textFill="RED" />
+                  <Label layoutX="26.0" layoutY="141.0" lineSpacing="1.0" prefHeight="26.0" prefWidth="82.0" text="Full Name">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="libFullname_field" layoutX="118.0" layoutY="141.0" prefHeight="26.0" prefWidth="188.0" promptText="fullname" style="-fx-background-color: white;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="388.0" layoutY="112.0" prefHeight="552.0" prefWidth="679.0" style="-fx-background-color: #F6D7BB; -fx-border-width: 1; -fx-border-color: #ECA76A;">
+               <children>
+                  <TableView fx:id="libData_table" layoutX="3.0" layoutY="66.0" prefHeight="458.0" prefWidth="670.0" style="-fx-background-color: #FAF5E1;">
+                     <columns>
+                        <TableColumn fx:id="col_name" prefWidth="116.79995727539062" text="Full Name" />
+                        <TableColumn fx:id="col_username" prefWidth="101.60003662109375" text="Username" />
+                        <TableColumn fx:id="col_pass" prefWidth="91.20001220703125" text="Password" />
+                        <TableColumn fx:id="col_email" prefWidth="124.0" text="Email" />
+                        <TableColumn fx:id="col_phone" prefWidth="108.79998779296875" text="Phone" />
+                        <TableColumn fx:id="col_address" prefWidth="122.39990234375" text="Address" />
+                     </columns>
+                  </TableView>
+                  <TextField alignment="CENTER" layoutX="223.0" layoutY="26.0" text="Librarian Lists">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="libDataSearch_label" layoutX="95.0" layoutY="28.0" onAction="#libDataSearch" prefHeight="30.0" prefWidth="585.0" promptText="serach here" style="-fx-background-color: transparent; -fx-border-radius: 15px; -fx-border-color: orange;" />
+            <ImageView fitHeight="30.0" fitWidth="50.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/search.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="alert_label11" alignment="CENTER" layoutX="103.0" layoutY="64.0" prefHeight="18.0" prefWidth="276.0" style="-fx-background-color: transparent;" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
